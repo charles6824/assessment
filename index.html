@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <style>
+        body{
+            background: #000;
+        }
+        .box{
+            width: 50%;
+            padding: 10px 10px 25px 10px;
+            margin: 180px auto 50px;
+            box-shadow: 0px 2px 15px rgba(225, 225, 225, 0.05);
+            background: #f4f4f4;
+            text-align: center;
+        }
+        .box h2{
+            text-align: center;
+            font-weight: bold;
+        }
+        .box p{
+            text-align: left;
+            padding-bottom: 10px;
+        }
+        .box .btn{
+            background: rgb(0, 60, 255);
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 2s linear; 
+        }
+        .box .btn:hover{
+            color: #000000;
+            background: #f4f4f4;
+            border: 1px solid #000;
+        }
+        #dialog{
+            display: none;
+        }
+        #dialog p{
+            text-align: center;
+        }
+        .yes{
+            background: rgb(0, 60, 255);
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-right: 10px; 
+        }
+        .no{
+            background: rgb(0, 60, 255);
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+   <div class="box" id="btnA">
+       <h2>INSTRUCTIONS</h2>
+       <p>Read the Passage carefully and Answer the question 1 - 5 based on the Passage. <br>
+        Question 6 - 10 are independent of the Passage and should aswell be answered
+       </p>
+       <p>You have 60 seconds to complete the Assessment. GOODLUCK</p>
+       <button class="btn" id="btn">Start</button>
+   </div>
+   <div class="box" id="dialog">
+       <p>Are you sure you want to Begin your Assessment?</p>
+       <a href="question.html" class="yes">Yes</a> <a href="index.html" class="no">No</a>
+   </div>
+   <script>
+       let c = 0
+       let btn = document.getElementById('btn')
+       let btnA = document.getElementById('btnA')
+       let dialog = document.getElementById('dialog')
+       btn.addEventListener('click', ()=>{
+            btnA.style.display = 'none'
+            dialog.style.display = 'block'
+            c = 1
+           
+       })
+   </script>
+</body>
+</html>

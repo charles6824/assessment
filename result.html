@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Page</title>
+    <style>
+        body{
+            background: #000;
+        }
+        #root{
+            width: 50%;
+            padding: 20px 10px 25px 10px;
+            margin: 180px auto 50px;
+            box-shadow: 0px 2px 15px rgba(225, 225, 225, 0.05);
+            background: #f4f4f4;
+            text-align: center;
+            border-radius: 20px;
+        }
+        .btn{
+            background: rgb(0, 60, 255);
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 2s linear; 
+        }
+        .btn:hover{
+            color: #000000;
+            background: #f4f4f4;
+            border: 1px solid #000;
+        }
+        .center{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <p id="rr"></p>
+    </div>
+    <div class="center">
+        <a href="index.html" class="btn">Homepage</a>
+    </div>
+    
+
+    <script>
+        let submit = document.getElementById('send')
+        let input = document.getElementById('text')
+        let p = document.getElementById('rr')
+        let root = document.getElementById('root')
+        
+        let cat = localStorage.getItem('result')
+        if(cat >= 75){
+            let img = document.createElement('img')
+            img.src = "img/congrat.jpg"
+            img.alt = "congratulations"
+            img.style.width = "25%"
+            p.textContent = ` CONGRATULATIONS Dear user, You scored ${cat} Marks and as such, you have qualified for the next phase of the Interview`
+            p.style.color = "green"
+            p.style.fontWeight = 'bold'
+            root.append(img, p)
+        }
+        else{
+            let img = document.createElement('img')
+            img.src = "img/regret.jpg"
+            img.alt = "regret"
+            img.style.width = "15%"
+            p.textContent = `We Regret to inform you that you didn't pass the cutoff mark as you scored ${cat} Marks. Your Application won't be considered 
+                                for consideartion. We wish you the best`
+            p.style.color = "red"
+            p.style.fontWeight = 'bold'
+            root.append(img, p)
+        }
+    </script>
+</body>
+</html>

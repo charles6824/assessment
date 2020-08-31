@@ -1,0 +1,87 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<title>Question Section</title> 
+	<link href="a.css" rel="stylesheet"> 
+    <style>
+         body{
+            background: #000;
+            color: #fff;
+        }
+        #root{
+            color: #000;
+            width: 80%;
+            padding: 20px 10px 25px 10px;
+            margin: 10px auto 50px;
+            box-shadow: 0px 2px 15px rgba(225, 225, 225, 0.05);
+            background: #f4f4f4;
+            border-radius: 20px;
+        }
+        #root h4{
+            text-align: center;
+        }
+        #root p{
+            text-align: left;
+        }
+        .btn{
+            background: rgb(0, 60, 255);
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-left: 28rem;
+}
+        ul{
+            list-style : none;
+        }
+        .removeStyle {
+	        list-style : none ; 
+	        color : #339;
+        }
+        .dot {
+            height: 8px; width: 8px;
+            border-radius: 4px; /* rounds corners */
+            background: blue;
+            position: absolute;
+        } 
+
+        #counter{
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        @media(max-width:576px){
+            #root{
+                width: 97%;
+            }
+        }
+    </style>
+</head>
+<body>
+	<div id="root">
+        <div id="counter"></div> 
+        <h4 id="head">PASSAGE</h4>
+        <p id="passage">Open-source software should not be confused with freeware, or software that is
+            available to install free of charge. While most open-source software is free, there are
+            many other criteria – namely that the source code must be available to the general
+            public via an open-source license, and that anyone is allowed to modify it. Any
+            modifications made must also be distributed under the same terms as the original
+            software. Proponents of the open-source movement believe this collaborative
+            development methodology results in quicker improvements and software that can be
+            easily adapted to users’ needs. Financial savings are another main benefit of opensource software. Because numerous programmers are able to identify and fix
+            problems, advocates believe open-source software is more reliable than proprietary
+            software. <br>
+            The majority of commercial software protects its source code to prevent competitors
+            from developing a competing product. By only making a compiled, ready-to-run
+            version available, software manufacturers retain full control over their product, which
+            they argue ensures higher levels of quality and security. End-users must purchase a
+            license fee, and typically benefit from a warranty and technical support. Although
+            open-source software does not charge license fees to fund its development, it does
+            not follow that it cannot be commercially viable. Developers charge for installation,
+            training and technical support. Alternatively, licenses for add-ons and additional
+            software may be sold.</p>
+    </div>
+    <script src="main.js"></script>
+</body>
